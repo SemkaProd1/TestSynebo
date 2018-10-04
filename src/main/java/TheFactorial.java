@@ -9,21 +9,21 @@ class TheFactorial {
 
         BigInteger factorial = one;
 
-        BigInteger rr = one;
+        BigInteger bigNumber = one;
 
         if (number instanceof Long) {
-            rr = BigInteger.valueOf((Long) number);
+            bigNumber = BigInteger.valueOf((Long) number);
         }
         if (number instanceof Integer) {
-            rr = BigInteger.valueOf((Integer) number);
+            bigNumber = BigInteger.valueOf((Integer) number);
         }
         if (number instanceof BigInteger) {
-            rr = (BigInteger) number;
+            bigNumber = (BigInteger) number;
         }
 
 
-        for (BigInteger i = one; rr.compareTo(i) > 0; i = i.add(one)) {
-            rr = rr.divide(i);
+        for (BigInteger i = one; bigNumber.compareTo(i) > 0; i = i.add(one)) {
+            bigNumber = bigNumber.divide(i);
             factorial = factorial.add(one);
         }
         return factorial.intValue();
