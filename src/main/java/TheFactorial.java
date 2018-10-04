@@ -10,7 +10,7 @@ class TheFactorial {
         BigInteger factorial = one;
 
         BigInteger rr = one;
-        
+
         if (number instanceof Long) {
             rr = BigInteger.valueOf((Long) number);
         }
@@ -24,7 +24,7 @@ class TheFactorial {
 
         for (BigInteger i = one; rr.compareTo(i) > 0; i = i.add(one)) {
             rr = rr.divide(i);
-            factorial = factorial.add(BigInteger.ONE);
+            factorial = factorial.add(one);
         }
         return factorial.intValue();
     }
